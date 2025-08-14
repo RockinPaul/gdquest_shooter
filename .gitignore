@@ -1,0 +1,55 @@
+# Godot project .gitignore (Godot 4)
+
+# Project-local cache and metadata (auto-generated)
+.godot/
+
+# Godot 3.x import cache folder (not used in Godot 4 but safe to ignore if present)
+.import/
+
+# Keep per-asset import settings tracked (do NOT ignore *.import)
+# These files store import options for textures/audio/etc and should be committed.
+# *.import  <-- intentionally NOT ignored
+
+# C#/.NET (if using Godot .NET)
+.mono/
+**/bin/
+**/obj/
+
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE/editor folders (optional)
+.vscode/
+.idea/
+.vs/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Common export/build output locations (adjust to your workflow)
+export/
+exports/
+build/
+builds/
+bin/
+dist/
+release/
+releases/
+
+# Exported artifacts (in case you export directly into the repo)
+*.pck
+*.zip
+*.tar.gz
+*.exe
+*.apk
+*.aab
+*.ipa
+*.dmg
+*.app
