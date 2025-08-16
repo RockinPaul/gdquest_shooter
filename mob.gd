@@ -16,7 +16,14 @@ func _physics_process(_delta: float) -> void:
 
 func take_damage():
 	health -= 1
+	slime.play_hurt()
 	
 	if health == 0:
 		queue_free()
-	
+		const SMOKE_EXPLOSION = preload("res://smoke_explosion/smoke_explosion.tscn")
+		var smoke = SMOKE_EXPLOSION.instantiate()
+		# Add smoke to the sibling of the mob rather than mob itself,
+		# because mob is gets queue_free() by this time.
+		get_parent().add_child(smoke)
+		smoke.global_position = global_position
+		
