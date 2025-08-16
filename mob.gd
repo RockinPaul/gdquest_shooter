@@ -1,7 +1,12 @@
 extends CharacterBody2D
 
 @onready var player = get_node("/root/Game/Player")	
+@onready var slime: Node2D = $Slime
+
 var health = 3
+
+func _ready() -> void:
+	slime.play_walk()
 
 func _physics_process(_delta: float) -> void:
 	var direction = global_position.direction_to(player.global_position)
