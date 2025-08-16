@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmpt6q2heak5s"]
+[gd_scene load_steps=5 format=3 uid="uid://cmpt6q2heak5s"]
 
 [ext_resource type="PackedScene" uid="uid://repvskd5y1d0" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://dtw6bdkma0po5" path="res://pine_tree.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b814x1ioxgmla" path="res://mob.tscn" id="3_feb5d"]
+
+[sub_resource type="Curve2D" id="Curve2D_feb5d"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -320, -301, 0, 0, 0, 0, -317.324, -279.648, 0, 0, 0, 0, 546.687, -337.603, 0, 0, 0, 0, 1298.88, -353.871, 0, 0, 0, 0, 1885.4, -344.72, 0, 0, 0, 0, 2328.58, -364.038, 0, 0, 0, 0, 2321.47, 346.665, 0, 0, 0, 0, 2318.42, 877.404, 0, 0, 0, 0, 2325.53, 1209.88, 0, 0, 0, 0, 2321.47, 1323.75, 0, 0, 0, 0, 1041.71, 1375.61, 0, 0, 0, 0, -301.06, 1320.7, 0, 0, 0, 0, -320, -301)
+}
+point_count = 13
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -43,3 +49,14 @@ position = Vector2(1586, 403)
 
 [node name="PineTree7" parent="Trees" instance=ExtResource("2_e2o6t")]
 position = Vector2(228, 550)
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(36.1784, 21.0437)
+scale = Vector2(0.983784, 0.983534)
+curve = SubResource("Curve2D_feb5d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(1054.57, -348.587)
+rotation = -0.0216237
+progress = 1395.47
