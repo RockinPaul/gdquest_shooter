@@ -8,3 +8,4 @@ res://bullet.tscn
 res://bullet.gd
 res://mob.gd
 res://smoke_explosion/smoke_explosion.gdshader
+res://player.gd
